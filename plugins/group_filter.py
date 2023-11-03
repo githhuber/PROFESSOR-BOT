@@ -311,8 +311,8 @@ async def advantage_spell_chok(msg):
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
-        k = await msg.reply("🔸Check proper movie spelling in google before you ask. If you dont get again? Try movie name with year.\n\n🔸The Bot uses SQLITE LIKE Command to search\nSearch like - Vikram 2022\nNot like  - Vikram 2022 UNCUT 1080p 10bit HEVC HDRip ORG. [Hindi DD 5.1 - Tamil] x265 ESubs.mkv\nOr not like - Vikram Malayalam \n\n🔸 For getting Specific Series Episode\nSearch like - Loki S01E03\nNot like - Loki  Season 1 episode 3😮‍💨")
-        await asyncio.sleep(8)
+        k = await msg.reply("🔸Check proper movie spelling in google before you ask. If you dont get again? Try movie name with year.\n\n🔸The Bot uses SQLITE LIKE Command to search\n\nSearch like - Vikram 2022\n\nNot like  - Vikram 2022 UNCUT 1080p 10bit HEVC HDRip ORG. [Hindi DD 5.1 - Tamil] x265 ESubs.mkv\nOr not like - Vikram Malayalam \n\n🔸 For getting Specific Series Episode\n\nSearch like - Loki S01E03\n\nNot like - Loki  Season 1 episode 3😮‍💨")
+        await asyncio.sleep(15)
         await k.delete()
         return
     regex = re.compile(r".*(imdb|wikipedia).*", re.IGNORECASE)  # look for imdb / wiki results
@@ -341,7 +341,7 @@ async def advantage_spell_chok(msg):
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
         k = await msg.reply("🔸Check proper movie spelling in google before you ask. If you dont get again? Try movie name with year.\n\n🔸The Bot uses SQLITE LIKE Command to search\nSearch like - Vikram 2022\nNot like  - Vikram 2022 UNCUT 1080p 10bit HEVC HDRip ORG. [Hindi DD 5.1 - Tamil] x265 ESubs.mkv\nOr not like - Vikram Malayalam \n\n🔸 For getting Specific Series Episode\nSearch like - Loki S01E03\nNot like - Loki  Season 1 episode 3😮‍💨")
-        await asyncio.sleep(8)
+        await asyncio.sleep(15)
         await k.delete()
         return
     temp.GP_SPELL[msg.id] = movielist
