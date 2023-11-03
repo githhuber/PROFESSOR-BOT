@@ -132,7 +132,7 @@
         },
         "BUTTON_LOCK_TEXT": {
             "description": "button lock text [User = {query}]",
-            "value": "⚠️ 𝙃𝙚𝙮 {query}! file nyn tharilla ;)",
+            "value": "⚠️ 𝙃𝙚𝙮 {query}! Search your film?)",
             "required": false
         },
         "PMFILTER": {
